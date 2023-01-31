@@ -1,29 +1,97 @@
-export const seo = {
-  title: "Portfolio Boilerplate",
-  description:
-    "A Next.js boilerplate for building your portfolio as quick as possible",
-  canonical: "https://portfolio-boilerplate-nextjs.vercel.app/",
-};
-
-export const data = [
-  {
-    title: "Your title",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla tempora dolorem doloribus repudiandae, possimus quod quas. Ipsum culpa repellat dolorem vero odit iste delectus id, sed iure facere, animi suscipit.",
-    image: "/code-review-bro.png",
-  },
-  {
-    title: "Your title",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla tempora dolorem doloribus repudiandae, possimus quod quas. Ipsum culpa repellat dolorem vero odit iste delectus id, sed iure facere, animi suscipit.",
-    image: "/code-review-bro.png",
-  },
-  {
-    title: "Your title",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla tempora dolorem doloribus repudiandae, possimus quod quas. Ipsum culpa repellat dolorem vero odit iste delectus id, sed iure facere, animi suscipit.",
-    image: "/code-review-bro.png",
-  },
-];
+export const projects = [
+	{
+		name: 'gamer_reporting_system',
+		lang: 'javascript',
+		skills: ['vaniliaJS', 'lowDB'],
+		deploy: ['cafe24'],
+		githubUrl: 'https://github.com/greyHairChooseLife/gamer-reporting-system',
+		explain: ['직전에 끝마친 게임에서 만났던 플레이어들이 또다시 같은 편이 되고 싶지 않은 서로에게 1회 투표 할 수 있습니다. 새로운 게임이 시작되기 직전 유저들과 무작위로 팀 매칭이 되는데, 이 단계에서 복수의 유저들을 조회하고 투표 받은 기록을 확인 할 수 있습니다.', '해당 게임사에서 제공하는 API를 활용하였습니다.'],
+		background: ['코딩을 처음 접하고 html, css, js가 뭔지 막 알게 되었을 때 만들어 본 웹 어플리케이션입니다. 당시 인기있던 온라인 게임(리그오브레전드)의 플레이어들을 대상으로 하였습니다.',],
+	},
+	{
+		name: 'walking_thought',
+		lang: 'typescript',
+		skills: ['express', 'ejs', 'mariadb'],
+		deploy: ['docker', 'raspberry-pi'],
+		githubUrl: 'https://github.com/greyHairChooseLife/walkingThought',
+		explain: ["- 일간 일기 : 한 화면에 3년치 '같은 날'을 보여주고, 오늘의 일기를 매우 짧게 작성합니다.",
+"- 월간 일기 : 매 월 말일 전후로 5개의 일간 일기를 선택하고, 이것을 종합한 월간 일기를 작성합니다. 일간 일기는 달력의 일자를 클릭해서 조회하거나, 이상형 월드컵처럼 선택 할 수 있습니다.",
+"- 연간 일기 : 매 년 말일 전후로 월간일기를 종합한 연간 일기를 작성합니다."],
+		background: ["레이아웃에 변화를 준 일기쓰기 웹 어플리케이션입니다. '5 Year Diary'라는 일기장 제품에 영감을 받아 만들었습니다.", "독서모임이 있는 동네 책방을 통해 6~8명을 유상 모집하여 2개월 간 베타테스트를 진행했습니다.",],
+	},
+	{
+		name: 'qrcode_pricetag_v2_F',
+		lang: 'typescript',
+		skills: ['react'],
+		deploy: ['aws'],
+		githubUrl: 'https://github.com/greyHairChooseLife/qrcode_pricetag_v2_front',
+		explain: ["거래처가 보내주는 납품 데이터(엑셀파일)를 업로드 해 주면 DB에 등록됩니다. 이때 거래처별로 마진율을 설정 할 수 있습니다. 기존에 등록된 거래처 상품의 경우 적용 전 변화의 정도를 확인 할 수 있습니다.", "거래처 또는 개별 상품을 선택하여 QR코드를 생성합니다. 진열된 제품에 부착할 가격표로 사용합니다.", "QR코드를 휴대폰으로 인식하면 가격과 기타 정보를 조회하고, 자신의 장바구니에 수량을 선택하여 담을 수 있습니다.", "판매 점원은 개인 휴대폰 등으로 방문 고객의 전화번호를 조회하여 장바구니를 확인 할 수 있습니다. 이때 장바구니에 담긴 제품들의 바코드를 스캔하여 기존  POS 시스템에서 결제 할 수 있습니다."],
+		background: ["아르바이트로 다니던 주방기물 판매업체에 도움이 될 수 있겠다는 생각으로 진행 했습니다. 시연 해 보이니 사장님이나 직원분들 모두 좋은 반응이었지만, 모종의 이유로 최종적으로는 매장 운영에 적용하지 않았습니다.", "코로나 영향으로 거래처들의 납품 단가 상승이 빈번하게 일어나자, 매장에 진열 된 1만가지 이상의 제품들의 판매 가격에 단가상승이 제대로 반영 되지 않았습니다. 물론 결제하는 매대에서는 정확한 가격을 확인 할 수 있었지만, 2층에서 손님을 안내하다가도 가격표를 믿을 수 없어 계산대의 직원에게 전화하기 일쑤였습니다.",],
+	},
+	{
+		name: 'qrcode_pricetag_v2_B',
+		lang: 'typescript',
+		skills: ['express', 'mariadb'],
+		deploy: ['aws'],
+		githubUrl: 'https://github.com/greyHairChooseLife/qrcode_pricetag_v2_back',
+		explain: ['상동'],
+		background: ['상동'],
+	},
+	{
+		name: 'bulse2_F',
+		lang: 'typescript',
+		skills: ['react'],
+		deploy: [],
+		githubUrl: 'https://github.com/greyHairChooseLife/bulse2_frontend',
+		explain: ["스케쥴이 비어있는 날짜와 시간을 선택하면 새로운 제안을 할 수 있습니다.", "관리자의 승인을 통해 제안 된 내용이 모두에게 노출 됩니다.", "참석자가 지정된 인원 수 이상이 되면 스케쥴이 확정됩니다.", 		],
+		background: ["강연, 토론 등 말하기 주제를 제안하고, 참석자 모집을 받을 수 있는 시스템입니다."],
+	},
+	{
+		name: 'bulse2_B',
+		lang: 'typescript',
+		skills: ['express', 'mariadb'],
+		deploy: [],
+		githubUrl: 'https://github.com/greyHairChooseLife/bulse2_backend',
+		explain: ['상동'],
+		background: ['상동'],
+	},
+	{
+		name: 'private1',
+		lang: 'shell script',
+		skills: [],
+		deploy: [],
+		githubUrl: '',
+		explain: ["robot.txt를 준수한 크롤링 프로그램입니다."],
+		background: ["프리랜서 업무"],
+	},
+	{
+		name: 'private2',
+		lang: 'javascript',
+		skills: [],
+		deploy: [],
+		githubUrl: '',
+		explain: ["robot.txt를 준수한 크롤링 프로그램입니다."],
+		background: ["프리랜서 업무"],
+	},
+	{
+		name: 'biz_check',
+		lang: 'javascript',
+		skills: ['express', 'ejs'],
+		deploy: ['gcp', 'docker'],
+		githubUrl: 'https://github.com/greyHairChooseLife/biz_check',
+		explain: ["사업자 번호를 조회하여 진위 여부를 확인합니다.", "양식파일을 다운 받아서 대량의 사업자 번호를 한번에 조회합니다."],
+		background: ["공공데이터 포털을 구경하다가 사업자 진위여부 조회 api를 봤는데, 검색 해 보니 기존에는 국세청 웹사이트에 접속하여 번거롭게 조회하는 것을 보고 만드는 중입니다."],
+	},
+	{
+		name: 'portfolio',
+		lang: 'javascript',
+		skills: ['nextjs'],
+		deploy: ['vercel'],
+		githubUrl: '',
+		explain: [],
+		background: ["포트폴리오 사이트"],
+	},
+]
 
 export const MAX_WIDTH = "1440px";
+export const MAX_NAV_WIDTH = "200px";
